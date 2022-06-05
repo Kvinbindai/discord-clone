@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+.laptop{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    background: transparent;
+    font-size: 20px;
+}
+.laptop a img{
+    margin-top: 5px;
+    width: 8rem;
+    height: 2rem;
+    
+}
+.laptop .text-link{
+    margin: 0 12rem 0;
+    padding: 0 4rem 0;
+}
+.laptop .text-link a{
+    padding: 0 1rem 0;
+    text-decoration: none;
+    color: #fff;
+}
+.laptop .text-link a:hover{
+    text-decoration: underline;
+}
+
+.laptop .btn-login{
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 5px 20px 5px;
+    border-radius: 20px;
+}
+.laptop .btn-login:hover{
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.tablet{
+    display: none;
+}
+
+/* for tablet */
+
+@media only screen and (max-width: 820px)  {
+    .laptop{
+        display: none;
+    }
+    .tablet{
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        z-index: 50;
+        font-size: 15px;
+        background-color: transparent;
+        margin: 20px 40px 0;
+    }
+    .tablet a img{
+        width: 20%;
+    }
+    .tablet .ham-menu{
+        display: flex;
+        position: relative;
+    }
+    .tablet .ham-menu .btn-login{
+        color: black;
+        text-decoration: none;
+        background-color: #fff;
+        padding: 5px 20px 5px;
+        border-radius: 20px;
+        margin-right: 20px;
+    }
+    .tablet .ham-menu .go-icon{
+        margin-top: 5px;
+        color: #fff;
+        font-size: 30px;
+    }
+    .backdrop{
+        display:none;
+    } 
+    .show-backdrop{
+        display: flex;
+        position: fixed;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .panel{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(300px);
+    }
+    .show-panel{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(0px);
+        transition: transform 1s ease-in-out;
+        background-color: #fff;
+        width: 300px;
+        height: 100vh;
+        padding: 20px 50px 30px 20px;
+        border-top-left-radius: 10px; 
+        border-bottom-left-radius: 10px; 
+    }
+    .side-bar-icon{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .side-bar-icon img{
+        width: 50%;
+    }
+    .side-bar .bars{
+        margin-top: 10px;
+        background-color: #ebedef;
+        height: 1px;
+    }
+    .side-bar .nav-side-bar{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0 0 10px;
+    }
+    .side-bar .nav-side-bar a{
+        text-decoration: none;
+        margin-bottom: 20px;
+        color: black;
+        padding: 10px 0 10px 10px;
+    }
+    .side-bar .nav-side-bar a:hover{
+        color: #00b0f4;
+        border-radius: 8px;
+        background-color: #f6f6f6;
+    }
+    .side-bar .bottom-panel{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        
+    }
+    .side-bar .bottom-panel button{
+        border-radius: 40px;
+        border: 0;
+        font-size: 20px;
+        padding: 10px 40px 10px;
+        cursor: pointer;
+        color: #fff;
+        background-color: rgb(64, 78, 237);
+    }
+}
+/* for mobile */
+ @media only screen and (max-width: 375px){
+    
+    .laptop{
+        display: none;
+    }
+    .tablet{
+        display: flex;
+        position: absolute;
+        justify-content: space-around;
+        z-index: 50;
+        font-size: 15px;
+        background-color: transparent;
+        margin: 20px 10px 0 20px;
+    }
+    .tablet a img{
+        width: 60%;
+    }
+    .tablet .ham-menu{
+        display: flex;
+        position: relative;
+    }
+    .tablet .ham-menu .btn-login{
+        color: black;
+        text-decoration: none;
+        background-color: #fff;
+        padding: 5px 20px 5px;
+        border-radius: 20px;
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .tablet .ham-menu .go-icon{
+        margin-top: 5px;
+        color: #fff;
+        font-size: 30px;
+    }
+    .backdrop{
+        display:none;
+    } 
+    .show-backdrop{
+        display: flex;
+        position: fixed;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .panel{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(300px);
+    }
+    .show-panel{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(0px);
+        transition: transform 1s ease-in-out;
+        background-color: #fff;
+        width: 300px;
+        height: 100vh;
+        padding: 20px 50px 30px 20px;
+        border-top-left-radius: 10px; 
+        border-bottom-left-radius: 10px; 
+    }
+    .side-bar-icon{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .side-bar-icon img{
+        width: 50%;
+    }
+    .side-bar .bars{
+        margin-top: 10px;
+        background-color: #ebedef;
+        height: 1px;
+    }
+    .side-bar .nav-side-bar{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0 0 10px;
+    }
+    .side-bar .nav-side-bar a{
+        text-decoration: none;
+        margin-bottom: 20px;
+        color: black;
+        padding: 10px 0 10px 10px;
+    }
+    .side-bar .nav-side-bar a:hover{
+        color: #00b0f4;
+        border-radius: 8px;
+        background-color: #f6f6f6;
+    }
+    .side-bar .bottom-panel{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        
+    }
+    .side-bar .bottom-panel button{
+        border-radius: 40px;
+        border: 0;
+        font-size: 15px;
+        padding: 10px 60px 10px;
+        cursor: pointer;
+        color: #fff;
+        background-color: rgb(64, 78, 237);
+    } 
+}
